@@ -1,0 +1,28 @@
+.title pass_transistor_OR_20bec001
+.include techfile130.txt
+.include Inv.lib
+
+
+**MOs d  g  s   b
+
+Mn1 Y ino A 0 nmos w=130n l=130n
+
+Mn2 Y B vdd 0 nmos w=130n l=130n
+
+x1 B ino Vdd inv
+
+
+Vdd Vdd 0 1.2
+
+
+VA A 0 PULSE (0 1.2 0 1n 1n 100n 200n)
+VB B 0 PULSE (0 1.2 0 1n 1n 200n 400n)
+
+
+.tran 0.1n 500n 0 0.1n
+.control
+run
+plot V(A) 
+plot V(B)
+plot V(Y)
+.endc

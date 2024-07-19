@@ -1,0 +1,8 @@
+* SPICE3 file created from dff_with_reset.ext - technology: scmos
+
+.option scale=1u
+
+C0 m2_n111_n88# 0 12.92fF **FLOATING
+C1 VDD 0 23.31fF **FLOATING
+C2 m1_n30_18# 0 7.33fF **FLOATING
+C3 m1_n91_22# 0 16.41fF **FLOATING

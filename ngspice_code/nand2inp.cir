@@ -1,0 +1,23 @@
+.title 2inputNAND_20bec001
+.include techfile130.txt
+
+
+**MOs d  g  s   b
+
+MP1 Y A Vdd Vdd pmos w=260n l=130n
+MP2 Y B Vdd vdd pmos w=260n l=130n
+Mn1 Y A n1 0 nmos w=130n l=130n
+Mn2 n1 B 0 0 nmos w=130n l=130n
+
+Vdd Vdd 0 1.2
+
+VA A 0 PULSE (0 1.2 0 1n 1n 100n 200n)
+VB B 0 PULSE (0 1.2 0 1n 1n 198n 400n)
+
+
+.tran 0.1n 500n 0 0.1n
+.control
+run
+plot V(A) V(B) 
+plot V(Y)
+.endc

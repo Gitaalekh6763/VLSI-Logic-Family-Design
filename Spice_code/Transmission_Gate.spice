@@ -1,0 +1,12 @@
+* SPICE3 file created from Transmission_Gate.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_n20_15# a_n10_4# w_20_n10# Gnd nfet w=6 l=3
++  ad=78 pd=38 as=88 ps=52
+M1001 a_n20_15# a_15_3# w_20_n10# w_20_n10# pfet w=6 l=3
++  ad=94 pd=54 as=72 ps=36
+C0 a_15_3# Gnd 2.26fF
+C1 a_n10_4# Gnd 3.81fF
+C2 a_n20_15# Gnd 13.35fF
+C3 w_20_n10# Gnd 4.89fF

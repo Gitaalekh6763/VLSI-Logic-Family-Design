@@ -1,0 +1,9 @@
+.title Inverter_20bec001
+.include techfile130.txt
+
+.subckt inv vi vout vdd
+Mp vout vi vdd vdd pmos l=130n w=2500n
+Mn vout vi 0 0 nmos l=130n w=1000n
+.ends inv
+
+.end

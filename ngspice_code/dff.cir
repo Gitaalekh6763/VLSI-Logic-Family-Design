@@ -1,0 +1,34 @@
+.title DFF_20ec001
+.include techfile130.txt
+.include Inv.lib
+
+
+**MOs d  g  s   b
+Mp1 n1 1 A Vdd pmos w=260n l=130n
+Mp2 n1 CL n2 Vdd pmos w=260n l=130n
+
+
+Mn1 n1 CL A 0 nmos w=130n l=130n
+Mn2 n1 1 n2 0 nmos w=130n l=130n
+
+x1 CL 1 Vdd inv
+//x2 CL2 2 Vdd inv
+x3 Y n2 Vdd inv
+x4 n1 Y Vdd inv
+
+
+Vdd Vdd 0 1.2
+
+
+VA A 0 PULSE (0 1.2 0 1n 1n 100n 200n)
+VCL CL 0 PULSE (0 1.2 0 1n 1n 50n 100n)
+//VCL2 CL2 0 PULSE (0 1.2 70n 1n 1n 20n 200n)
+
+.tran 0.1n 1000n 0 0.1n
+.control
+run
+plot V(A) 
+plot V(CL)
+plot V(1)
+plot V(Y)
+.endc

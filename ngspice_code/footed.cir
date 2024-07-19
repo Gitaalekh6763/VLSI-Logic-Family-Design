@@ -1,0 +1,32 @@
+.title footed-dynami_nand_20bec001
+.include techfile130.txt
+
+***Mos d g s b
+
+Mp1 Y CL Vdd Vdd pmos w=4000n l=130n
+
+Vdd Vdd 0 1.2
+
+Mn1 Y A n1 0 nmos w=3000n l=200n
+Mn2 n1 B n2 0 nmos w=3000n l=200n
+Mn3 n2 C n3 0 nmos w=3000n l=200n
+
+Mn4 n3 CL 0 0 nmos w=3000n l=200n
+
+Cload Y 0 100f
+
+VCL CL 0 PULSE (0 1.2 0 1n 1n 50n 100n)
+VA A 0 PULSE (0 1.2 0 1n 1n 100n 150n)
+VB B 0 PULSE (0 1.2 0 1n 1n 68n 200n)
+VC C 0 PULSE (0 1.2 0 1n 1n 198n 400n)
+
+
+.tran 0.1n 500n 
+.control
+run
+plot V(CL) 
+plot V(A) 
+plot V(B) 
+plot V(C)
+plot V(Y)
+.endc

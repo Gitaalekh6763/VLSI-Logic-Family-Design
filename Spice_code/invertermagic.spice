@@ -1,0 +1,12 @@
+* SPICE3 file created from invertermagic.ext - technology: scmos
+
+.option scale=0.01u
+
+M1000 output input gnd Gnd nfet w=400 l=200
++  ad=240000 pd=2000 as=240000 ps=2000
+M1001 output input vdd w_n8_n5# pfet w=400 l=200
++  ad=240000 pd=2000 as=240000 ps=2000
+C0 input w_n8_n5# 2.15fF
+C1 gnd Gnd 3.95fF
+C2 vdd Gnd 3.29fF
+C3 input Gnd 4.28fF

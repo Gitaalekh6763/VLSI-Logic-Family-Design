@@ -1,0 +1,24 @@
+.title NOR2inp_20bec001
+.include techfile130.txt
+
+MP1 n1 A Vdd Vdd pmos w=200n l=130n
+MP2 Y B n1 Vdd pmos w=260n l=130n
+Mn1 Y A 0 0 nmos w=130n l=130n
+Mn2 Y B 0 0 nmos w=130n l=130n
+
+
+Vdd Vdd 0 1.2
+
+VA A 0 PULSE (0 1.2 0 1n 1n 100n 200n)
+VB B 0 PULSE (0 1.2 0 1n 1n 200n 400n)
+
+
+.tran 0.1n 500n 0 0.1n
+.control
+run
+plot V(Y)
+plot V(A) V(B)
+.endc
+
+
+

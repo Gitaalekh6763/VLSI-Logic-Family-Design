@@ -1,0 +1,45 @@
+magic
+tech scmos
+timestamp 1664127489
+<< metal1 >>
+rect -30 18 9 22
+rect -99 -4 -95 17
+rect -131 -7 33 -4
+rect -80 -8 -76 -7
+rect -131 -16 33 -13
+rect -80 -17 -76 -16
+<< metal2 >>
+rect -111 26 -107 76
+rect -80 59 -76 75
+rect -80 55 -33 59
+rect -80 26 -76 55
+rect -111 22 -95 26
+rect -87 22 -76 26
+rect -111 -88 -107 22
+rect -80 -89 -76 22
+<< m2contact >>
+rect -91 22 -87 26
+use inverter  inverter_1
+timestamp 1664125833
+transform 1 0 -93 0 1 33
+box -9 -24 9 23
+use transmission_gate  transmission_gate_0
+timestamp 1664125988
+transform 1 0 -28 0 1 30
+box -19 -29 6 29
+use inverter  inverter_0
+timestamp 1664125833
+transform 1 0 10 0 1 29
+box -9 -24 9 23
+use transmission_gate  transmission_gate_1
+timestamp 1664125988
+transform 1 0 -30 0 1 -55
+box -19 -29 6 29
+use inverter  inverter_2
+timestamp 1664125833
+transform 1 0 12 0 1 -49
+box -9 -24 9 23
+<< labels >>
+rlabel metal1 -49 -6 -49 -6 1 GND
+rlabel metal1 -49 -15 -49 -15 1 VDD
+<< end >>

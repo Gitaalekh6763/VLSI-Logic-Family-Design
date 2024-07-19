@@ -1,0 +1,18 @@
+* SPICE3 file created from Pass_And.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_n15_25# a_n2_n17# a_n24_n34# Gnd nfet w=5 l=3
++  ad=240 pd=116 as=160 ps=74
+M1001 a_n2_n17# a_n18_n5# a_n13_n17# Gnd nfet w=5 l=3
++  ad=40 pd=26 as=40 ps=26
+M1002 a_n2_n17# a_n18_n5# w_n14_3# w_n14_3# pfet w=5 l=3
++  ad=40 pd=26 as=40 ps=26
+M1003 a_n15_25# a_n18_n5# a_n24_25# Gnd nfet w=5 l=3
++  ad=0 pd=0 as=30 ps=22
+C0 a_n24_n34# Gnd 7.19fF
+C1 a_n13_n17# Gnd 3.38fF
+C2 a_n2_n17# Gnd 12.97fF
+C3 a_n15_25# Gnd 10.15fF
+C4 a_n18_n5# Gnd 17.77fF
+C5 a_n24_25# Gnd 7.38fF
